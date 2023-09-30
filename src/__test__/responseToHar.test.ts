@@ -118,3 +118,34 @@ it('creates entry from response with JSON body', async () => {
     redirectURL: '',
   })
 })
+
+it('creates entry for redirect response', async () => {
+  const har = await responseToHar(
+    new Response(null, {
+      status: 301,
+      headers: {
+        Location: '/new-url',
+      },
+    })
+  )
+
+  expect(har).toEqual<Har.Response>({
+    httpVersion: 'HTTP/1.0',
+    headersSize: 52,
+    redirectURL: '/new-url',
+    status: 301,
+    statusText: 'Moved Permanently',
+    headers: [
+      {
+        name: 'location',
+        value: '/new-url',
+      },
+    ],
+    cookies: [],
+    content: {
+      mimeType: '',
+      size: 0,
+    },
+    bodySize: 0,
+  })
+})
