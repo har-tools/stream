@@ -12,13 +12,14 @@ const stream = new HarStream()
 
 // Create a new network entry.
 const entry = new NetworkEntry(new Request('https://example.com'))
+
+// Write the network entry early.
+// As soon as you ".end()" the entry with a Response,
+// the stream will emit the complete HAR entry.
+stream.write(entry)
+
 // Call the ".end()" method once you receive the response.
 entry.end(new Response('Hello world'))
-
-// Write the network entry.
-// This will convert the Request/Response information
-// to an HAR entry and stream it back to you.
-stream.write(entry)
 ```
 
 Listening to HAR entries:
