@@ -1,6 +1,7 @@
 import * as Har from 'har-format'
 import { toHeaders } from './utils/toHeaders'
 import { HttpMessage } from './utils/toHttpMessage'
+import { toCookies } from './utils/toCookies'
 
 /**
  * Transforms a given Fetch API `Response` instance to
@@ -10,6 +11,7 @@ export async function responseToHar(response: Response): Promise<Har.Response> {
   const { status, statusText } = response
   const redirectUrl = response.headers.get('Location') || ''
   const headers = toHeaders(response.headers)
+  const cookies = toCookies(response.headers)
   const message = await HttpMessage.from(response)
 
   // Compute the response body size taking any compression
@@ -23,10 +25,7 @@ export async function responseToHar(response: Response): Promise<Har.Response> {
     status,
     statusText,
     headers,
-    /**
-     * @todo Cookies
-     */
-    cookies: [],
+    cookies,
     content: {
       size: message.bodySize,
       encoding: message.encoding,

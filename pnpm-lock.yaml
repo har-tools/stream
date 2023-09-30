@@ -3,13 +3,17 @@ lockfileVersion: 5.4
 specifiers:
   '@types/har-format': ^1.2.13
   '@types/node': ^20.8.0
+  '@types/set-cookie-parser': ^2.4.4
+  set-cookie-parser: ^2.6.0
   vitest: ^0.34.6
 
 dependencies:
   '@types/har-format': 1.2.13
+  set-cookie-parser: 2.6.0
 
 devDependencies:
   '@types/node': 20.8.0
+  '@types/set-cookie-parser': 2.4.4
   vitest: 0.34.6
 
 packages:
@@ -243,6 +247,12 @@ packages:
 
   /@types/node/20.8.0:
     resolution: {integrity: sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==}
+    dev: true
+
+  /@types/set-cookie-parser/2.4.4:
+    resolution: {integrity: sha512-xCfTC/eL/GmvMC24b42qJpYSTdCIBwWcfskDF80ztXtnU6pKXyvuZP2EConb2K9ps0s7gMhCa0P1foy7wiItMA==}
+    dependencies:
+      '@types/node': 20.8.0
     dev: true
 
   /@vitest/expect/0.34.6:
@@ -490,6 +500,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /set-cookie-parser/2.6.0:
+    resolution: {integrity: sha512-RVnVQxTXuerk653XfuliOxBP81Sf0+qfQE73LIYKcyMYHG94AuH0kgrQpRDuTZnSmjpysHmzxJXKNfa6PjFhyQ==}
+    dev: false
 
   /siginfo/2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}

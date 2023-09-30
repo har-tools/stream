@@ -10,10 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/har-format": "^1.2.13"
+    "@types/har-format": "^1.2.13",
+    "set-cookie-parser": "^2.6.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
+    "@types/set-cookie-parser": "^2.4.4",
     "vitest": "^0.34.6"
   }
 }
