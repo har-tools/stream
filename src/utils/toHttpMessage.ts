@@ -150,5 +150,8 @@ async function getBodyOrUndefined(
     return undefined
   }
 
-  return instance.clone().text()
+  // The consumer must clone the request/response
+  // instance before consturcting an HTTP message from it.
+  // That's also the right surface to clone the instance.
+  return instance.text()
 }
