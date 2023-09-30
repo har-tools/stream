@@ -1,6 +1,7 @@
 {
-  "name": "har-transformers",
+  "name": "@har-tools/stream",
   "version": "0.0.0",
+  "description": "Create a stream of HAR entries from the Fetch API Request/Response instances",
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest"
