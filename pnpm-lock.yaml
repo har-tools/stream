@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@open-draft/deferred-promise': ^2.2.0
   '@types/har-format': ^1.2.13
   '@types/node': ^20.8.0
   '@types/set-cookie-parser': ^2.4.4
@@ -8,6 +9,7 @@ specifiers:
   vitest: ^0.34.6
 
 dependencies:
+  '@open-draft/deferred-promise': 2.2.0
   '@types/har-format': 1.2.13
   set-cookie-parser: 2.6.0
 
@@ -226,6 +228,10 @@ packages:
   /@jridgewell/sourcemap-codec/1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
     dev: true
+
+  /@open-draft/deferred-promise/2.2.0:
+    resolution: {integrity: sha512-CecwLWx3rhxVQF6V4bAgPS5t+So2sTbPgAzafKkVizyi7tlwpcFpdFqq+wqF2OwNBmqFuu6tOyouTuxgpMfzmA==}
+    dev: false
 
   /@sinclair/typebox/0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}

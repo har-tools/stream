@@ -1,15 +1,23 @@
 {
   "name": "har-transformers",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
   "scripts": {
-    "test:watch": "vitest watch"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "har",
+    "archive",
+    "transform",
+    "fetch",
+    "entry",
+    "request",
+    "response"
+  ],
+  "author": "Artem Zakharchenko <kettanaito@gmail.com>",
+  "license": "MIT",
   "dependencies": {
+    "@open-draft/deferred-promise": "^2.2.0",
     "@types/har-format": "^1.2.13",
     "set-cookie-parser": "^2.6.0"
   },
