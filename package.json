@@ -1,0 +1,19 @@
+{
+  "name": "har-transformers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:watch": "vitest watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/har-format": "^1.2.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "vitest": "^0.34.6"
+  }
+}
