@@ -1,3 +1,4 @@
+import { STATUS_CODES } from 'node:http'
 import * as Har from 'har-format'
 import { toHeaders } from './utils/toHeaders'
 import { HttpMessage } from './utils/toHttpMessage'
@@ -8,7 +9,7 @@ import { toCookies } from './utils/toCookies'
  * an HAR entry object.
  */
 export async function responseToHar(response: Response): Promise<Har.Response> {
-  const { status, statusText } = response
+  const statusText = response.statusText || STATUS_CODES[response.status] || ''
   const redirectUrl = response.headers.get('Location') || ''
   const headers = toHeaders(response.headers)
   const cookies = toCookies(response.headers)
@@ -22,7 +23,7 @@ export async function responseToHar(response: Response): Promise<Har.Response> {
 
   return {
     httpVersion: HttpMessage.httpVersion,
-    status,
+    status: response.status,
     statusText,
     headers,
     cookies,

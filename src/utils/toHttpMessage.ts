@@ -33,7 +33,8 @@ export class HttpMessage {
     headers: Headers,
     public body: string | undefined
   ) {
-    this.encoding = headers.get('Content-Encoding') as BufferEncoding
+    this.encoding = (headers.get('Content-Encoding') ||
+      undefined) as BufferEncoding
 
     this.mimeType = headers.get('Content-Type') || ''
     this.bodySize =
