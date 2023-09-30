@@ -2,6 +2,12 @@
 
 Create a stream of HAR entries from the Fetch API Request/Response instances.
 
+## Installation
+
+```sh
+npm install @har-tools/stream
+```
+
 ## Usage
 
 ```js
