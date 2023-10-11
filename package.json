@@ -1,11 +1,16 @@
 {
-  "name": "@har-tools/stream",
   "type": "module",
+  "name": "@har-tools/stream",
   "version": "0.0.0",
   "description": "Create a stream of HAR entries from the Fetch API Request/Response instances",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "clean": "rimraf ./build",
+    "build": "pnpm clean && tsc -p ./tsconfig.build.json",
+    "release": "release publish"
   },
   "keywords": [
     "har",
@@ -25,8 +30,11 @@
     "set-cookie-parser": "^2.6.0"
   },
   "devDependencies": {
+    "@ossjs/release": "^0.8.0",
     "@types/node": "^20.8.0",
     "@types/set-cookie-parser": "^2.4.4",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2",
     "vitest": "^0.34.6"
   }
 }

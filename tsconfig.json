@@ -1,11 +1,13 @@
 {
-  "extends": "./tsconfig.base.json",
-  "references": [
-    {
-      "path": "./tsconfig.build.json"
-    },
-    {
-      "path": "./tsconfig.test.json"
-    }
-  ]
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "declaration": false
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }

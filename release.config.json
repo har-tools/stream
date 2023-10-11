@@ -1,0 +1,9 @@
+{
+  "profiles": [
+    {
+      "name": "latest",
+      "use": "pnpm publish --access=public --no-git-checks",
+      "prerelease": true
+    }
+  ]
+}

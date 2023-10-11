@@ -1,5 +1,5 @@
 import * as Har from 'har-format'
-import { requestToHar } from '../requestToHar.js'
+import { requestToHar } from '../src/requestToHar.js'
 
 it('does not include fragments in the url', async () => {
   const har = await requestToHar(
