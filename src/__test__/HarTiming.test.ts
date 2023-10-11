@@ -1,5 +1,5 @@
 import * as Har from 'har-format'
-import { EntryTimings } from '../EntryTimings'
+import { EntryTimings } from '../EntryTimings.js'
 
 beforeAll(() => {
   vi.useFakeTimers()

@@ -1,7 +1,8 @@
 import * as Har from 'har-format'
 import EventEmitter from 'node:events'
-import { EntryTimings } from './EntryTimings'
-import { requestToHar, responseToHar } from '.'
+import { EntryTimings } from './EntryTimings.js'
+import { requestToHar } from './requestToHar.js'
+import { responseToHar } from './responseToHar.js'
 
 export class NetworkEntry extends EventEmitter {
   public timings: EntryTimings

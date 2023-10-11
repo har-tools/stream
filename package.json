@@ -1,5 +1,6 @@
 {
   "name": "@har-tools/stream",
+  "type": "module",
   "version": "0.0.0",
   "description": "Create a stream of HAR entries from the Fetch API Request/Response instances",
   "scripts": {
@@ -18,6 +19,7 @@
   "author": "Artem Zakharchenko <kettanaito@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@har-tools/http-message": "^0.1.1",
     "@open-draft/deferred-promise": "^2.2.0",
     "@types/har-format": "^1.2.13",
     "set-cookie-parser": "^2.6.0"

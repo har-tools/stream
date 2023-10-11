@@ -1,5 +1,5 @@
 import * as Har from 'har-format'
-import { responseToHar } from '../responseToHar'
+import { responseToHar } from '../responseToHar.js'
 
 it('creates entry from the empty 200 OK response', async () => {
   const har = await responseToHar(new Response())

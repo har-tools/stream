@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@har-tools/http-message': ^0.1.1
   '@open-draft/deferred-promise': ^2.2.0
   '@types/har-format': ^1.2.13
   '@types/node': ^20.8.0
@@ -9,6 +10,7 @@ specifiers:
   vitest: ^0.34.6
 
 dependencies:
+  '@har-tools/http-message': 0.1.1
   '@open-draft/deferred-promise': 2.2.0
   '@types/har-format': 1.2.13
   set-cookie-parser: 2.6.0
@@ -217,6 +219,13 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@har-tools/http-message/0.1.1:
+    resolution: {integrity: sha512-d+oU2CzZjGgEXRMBBSWML049wAuVrO8RHPYCW0jJvJz2wknvlZL2kbies6Ca+DCpteahUPYTrUyS3ZMjbDLZpg==}
+    dependencies:
+      '@open-draft/deferred-promise': 2.2.0
+      outvariant: 1.4.0
+    dev: false
 
   /@jest/schemas/29.6.3:
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
@@ -449,6 +458,10 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
+
+  /outvariant/1.4.0:
+    resolution: {integrity: sha512-AlWY719RF02ujitly7Kk/0QlV+pXGFDHrHf9O2OKqyqgBieaPOIeuSkL8sRK6j2WK+/ZAURq2kZsY0d8JapUiw==}
+    dev: false
 
   /p-limit/4.0.0:
     resolution: {integrity: sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==}
