@@ -1,7 +1,7 @@
 import * as Har from 'har-format'
 import { DeferredPromise } from '@open-draft/deferred-promise'
-import { HarStream } from '../HarStream.js'
-import { NetworkEntry } from '../NetworkEntry.js'
+import { HarStream } from '../src/HarStream.js'
+import { NetworkEntry } from '../src/NetworkEntry.js'
 
 it('streams the written entries to the consumer', async () => {
   const stream = new HarStream()
