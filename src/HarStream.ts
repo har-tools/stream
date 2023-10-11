@@ -1,5 +1,5 @@
 import { Transform } from 'node:stream'
-import { NetworkEntry } from './NetworkEntry'
+import { NetworkEntry } from './NetworkEntry.js'
 
 export class HarStream extends Transform {
   constructor() {

@@ -1,16 +1,16 @@
 import * as Har from 'har-format'
-import { toQueryString } from './utils/toQueryString'
-import { toHeaders } from './utils/toHeaders'
-import { toCookies } from './utils/toCookies'
-import { HttpMessage } from './utils/toHttpMessage'
-import { toParamsByFormData, toParamsBySearchParams } from './utils/toParams'
+import { HttpMessage } from '@har-tools/http-message'
+import { toQueryString } from './utils/toQueryString.js'
+import { toHeaders } from './utils/toHeaders.js'
+import { toCookies } from './utils/toCookies.js'
+import { toParamsByFormData, toParamsBySearchParams } from './utils/toParams.js'
 
 export async function requestToHar(request: Request): Promise<Har.Request> {
   const urlWithoutFragment = request.url.replace(/(#.+)$/g, '')
   const queryString = toQueryString(request.url)
   const headers = toHeaders(request.headers)
   const cookies = toCookies(request.headers)
-  const message = await HttpMessage.from(request)
+  const message = await HttpMessage.fromRequest(request)
 
   const harRequest: Har.Request = {
     httpVersion: HttpMessage.httpVersion,
