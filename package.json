@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@har-tools/stream",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create a stream of HAR entries from the Fetch API Request/Response instances",
   "main": "build/index.js",
   "types": "build/index.d.ts",
