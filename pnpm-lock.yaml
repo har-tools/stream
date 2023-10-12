@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@har-tools/http-message': ^0.1.1
+  '@har-tools/http-message': ^0.1.2
   '@open-draft/deferred-promise': ^2.2.0
   '@ossjs/release': ^0.8.0
   '@types/har-format': ^1.2.13
@@ -13,7 +13,7 @@ specifiers:
   vitest: ^0.34.6
 
 dependencies:
-  '@har-tools/http-message': 0.1.1
+  '@har-tools/http-message': 0.1.2
   '@open-draft/deferred-promise': 2.2.0
   '@types/har-format': 1.2.13
   set-cookie-parser: 2.6.0
@@ -226,8 +226,8 @@ packages:
     dev: true
     optional: true
 
-  /@har-tools/http-message/0.1.1:
-    resolution: {integrity: sha512-d+oU2CzZjGgEXRMBBSWML049wAuVrO8RHPYCW0jJvJz2wknvlZL2kbies6Ca+DCpteahUPYTrUyS3ZMjbDLZpg==}
+  /@har-tools/http-message/0.1.2:
+    resolution: {integrity: sha512-zhkPC7Kj/fWvKqK/D2hBFD50G6mGAs0q7oBd7pNmzr1WLkENrQJ6MRsUv4M3RsYOG+C1Mp0sUoRJXr3SUF2TNQ==}
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
       outvariant: 1.4.0

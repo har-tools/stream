@@ -24,7 +24,7 @@
   "author": "Artem Zakharchenko <kettanaito@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@har-tools/http-message": "^0.1.1",
+    "@har-tools/http-message": "^0.1.2",
     "@open-draft/deferred-promise": "^2.2.0",
     "@types/har-format": "^1.2.13",
     "set-cookie-parser": "^2.6.0"
