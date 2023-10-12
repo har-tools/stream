@@ -12,6 +12,8 @@ afterAll(() => {
 it('calculates the timings for insecure request', () => {
   const timings = new EntryTimings()
 
+  timings.socketOpened()
+  vi.advanceTimersByTime(5)
   timings.dnsLookupEnd()
   vi.advanceTimersByTime(10)
   timings.connected()
@@ -27,18 +29,20 @@ it('calculates the timings for insecure request', () => {
 
   expect(timings.toJSON()).toEqual<Har.Timings>({
     blocked: 0.01,
-    dns: 10,
+    dns: 5,
     connect: 10,
     ssl: -1,
     send: 20,
     wait: 30,
-    receive: 70,
+    receive: 40,
   })
 })
 
 it('calculates the rimgins for secure (SSL) request', () => {
   const timings = new EntryTimings()
 
+  timings.socketOpened()
+  vi.advanceTimersByTime(5)
   timings.dnsLookupEnd()
   vi.advanceTimersByTime(10)
   timings.connected()
@@ -57,11 +61,11 @@ it('calculates the rimgins for secure (SSL) request', () => {
 
   expect(timings.toJSON()).toEqual<Har.Timings>({
     blocked: 0.01,
-    dns: 10,
-    connect: 15,
+    dns: 5,
+    connect: 10,
     ssl: 5,
     send: 20,
     wait: 30,
-    receive: 70,
+    receive: 40,
   })
 })
