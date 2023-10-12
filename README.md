@@ -42,3 +42,19 @@ Stop the stream:
 ```js
 stream.destroy()
 ```
+
+## Timings
+
+You can control the network entry timings using the `entry.timings` API. It provides you with the methods you have to call _sequentially_ to indicate various staged of the request.
+
+**The order of the timing metrics:**
+
+1. `socketOpened`, socket opened but not connected yet.
+1. `dnsLookupEnd`, socket has resolved the DNS name.
+1. `connected`, socket has connected.
+1. `connectedSecure` (_Optional_)
+1. `requestEnd`, request is finished (request headers and body sent).
+1. `responseStart`, first byte of the response received.
+1. `responseEnd`, last byte of the response received.
+
+Entry timings are _dependent_, so if the previous timing is missing, the next one will not be calculated. For example, if `entry.timings.dnsLookupEnd()` was never called, the network entry will have both `dns` and `connected` timings as `-1`.
