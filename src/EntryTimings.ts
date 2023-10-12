@@ -70,29 +70,47 @@ export class EntryTimings implements Har.Timings {
 
   public connected() {
     this._connected = Date.now()
-    this.blocked = Math.max(0.01, this._socket - this._requestStart)
-    this.connect =
-      (this._connectedSecure || this._connected) - this._dnsLookupEnd
+
+    if (this._requestStart) {
+      this.blocked = Math.max(0.01, this._socket - this._requestStart)
+    }
+
+    if (this._dnsLookupEnd) {
+      this.connect =
+        (this._connectedSecure || this._connected) - this._dnsLookupEnd
+    }
   }
 
   public secureConnected() {
     this._connectedSecure = Date.now()
-    this.ssl = this._connectedSecure - this._connected
+
+    if (this._connected) {
+      this.ssl = this._connectedSecure - this._connected
+    }
   }
 
   public requestEnd() {
     this._requestEnd = Date.now()
-    this.send = this._requestEnd - (this._connectedSecure || this._connected)
+
+    if (this._connectedSecure || this._connected) {
+      this.send = this._requestEnd - (this._connectedSecure || this._connected)
+    }
   }
 
   public responseStart() {
     this._responseFirstByte = Date.now()
-    this.wait = this._responseFirstByte - this._requestEnd
+
+    if (this._requestEnd) {
+      this.wait = this._responseFirstByte - this._requestEnd
+    }
   }
 
   public responseEnd() {
     this._responseEnd = Date.now()
-    this.receive = this._responseEnd - this._responseFirstByte
+
+    if (this._responseFirstByte) {
+      this.receive = this._responseEnd - this._responseFirstByte
+    }
   }
 
   public toJSON(): Har.Timings {
